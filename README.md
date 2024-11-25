@@ -12,3 +12,18 @@ This project provides a Rust-based quantizer that can load quantization paramete
 - Quantize floating-point values to integers
 - Dequantize integer values back to floating-point
 - Compatibility testing with Python-generated results
+
+## Development Setup
+
+### Python Dependencies
+To generate test data, you'll need Python with Concrete ML:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then generate the test data for the logistic regression quantizer:
+
+```bash
+python scripts/generate_logistic_regression_quantizer_params.py
+```
