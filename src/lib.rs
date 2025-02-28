@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use ndarray::{ArrayD, IxDyn, Zip};
+pub use concrete_rust::generate_keyset_wasm;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SerializedValue<T> {

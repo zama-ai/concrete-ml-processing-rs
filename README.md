@@ -27,3 +27,7 @@ Then generate the test data for the logistic regression quantizer:
 ```bash
 python scripts/generate_logistic_regression_quantizer_params.py
 ```
+
+### Wasm
+
+Follow [this guide](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) to install dependencies and run the Wasm build. This should make the Concrete keygen available in Wasm.
