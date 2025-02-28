@@ -3,7 +3,22 @@ name = "concrete_quantizer"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+
+name = "concrete_quantizer"
+path = "src/main.rs"
+
+[lib]
+name = "concrete_quantizer"
+path = "src/lib.rs"
+crate-type = ["cdylib", "lib"]
+
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 ndarray = { version = "0.16.1", features = ["serde"] }
+
+# TODO: either use git or public crate (better, since git will fetch submodules!)
+# currently using a local dir
+# concrete-rust = { git = "https://github.com/zama-ai/concrete", branch = "main" , features = ["wasm"] }
+concrete-rust = { path = "../concrete/frontends/concrete-rust/" , features = ["wasm"] }
